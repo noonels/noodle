@@ -43,7 +43,6 @@ learn examples eta =
             in
               go ex eta (updateWeights ws) (count - 1)
 
-main :: IO -> IO
 main = do
   let
     eta = 2
