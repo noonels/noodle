@@ -1,0 +1,13 @@
+CS-5001: HW#1
+Programmer: Matthew Healy <mhrh3@mst.edu>
+
+TRAINING
+Using random seed = 531929
+Using learning rate eta = 0.0005
+After 5000 iterations:
+Weights:
+w0 = 35.0
+w1 = 39.291138264540116
+
+VALIDATION
+Sum-of-Squares Error = 2.4371526810113355

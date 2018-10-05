@@ -3,6 +3,7 @@ import sys
 from random import random, randint, seed
 
 ITERATIONS = 5000
+ETA = 0.0005
 
 class Example:
     def __init__(self, xs, y):
@@ -47,7 +48,7 @@ def main():
         my_seed = randint(0, 1000000)
     seed(my_seed)
     w = [randint(0, 100), randint(0, 100)]
-    eta = 0.001
+    eta = ETA
     E = getExamples('trashdata.txt')
     Ev = getExamples('moretrashdata.txt')
     w = learn(w, E, eta)
