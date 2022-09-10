@@ -4,7 +4,7 @@ Iterations::Int = 5000
 η::Float64 = 0.0005
 
 ŷ(ω, e) = sum([ω[i] * e.x[i] for i in 1:length(e.x)])
-sum_of_squares(E, ω) = sum([(e.y - ŷ(ω,e))^2 for e ∈ E])
+sum_of_squares(E, ω) = sum([(e.y - ŷ(ω, e))^2 for e ∈ E])
 
 struct example
     x::Array{Float64}
@@ -43,7 +43,7 @@ function main()
     else
         seed = rand(1:1000000)
     end
-        Random.seed!(seed)
+    Random.seed!(seed)
 
     E = read_examples("trashdata.txt")
     Ev = read_examples("moretrashdata.txt")
@@ -56,8 +56,8 @@ function main()
     Using learning rate eta = $η
     After $Iterations iterations:
     Weights:
-    w1 = $(ω[1])
-    w2 = $(ω[2])
+    ω1 = $(ω[1])
+    ω2 = $(ω[2])
 
     VALIDATION
     Sum-of-Squares Error = $(sum_of_squares(Ev, ω))
